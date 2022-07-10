@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative"
+    tools:context=".ServiceProviderLoginRegisterActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/wefixitlogo"
+        app:civ_border_color="@color/purple_200"
+        app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Service Provider"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextServiceProviderEmailAddress"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="287dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:layout_below="@id/editTextServiceProviderEmailAddress"
+        android:id="@+id/editServiceProviderTextPassword"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnDriverLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editServiceProviderTextPassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:onClick="LoginDriver"
+        android:text="Login" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnDriverRegister"
+        android:onClick="RegisterServiceProvider"
+        android:layout_below="@id/editServiceProviderTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Register" />
+
+    <TextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@id/btnDriverLogin"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="118dp"
+
+        android:onClick="ServiceProviderRegisterLink"
+        android:text="Create Account"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvLoginDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="190dp"
+        android:onClick="ServiceProviderSendDriverToLogin"
+        android:text="Already registered? Login here"
+        android:textColor="@color/purple_700"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</RelativeLayout>

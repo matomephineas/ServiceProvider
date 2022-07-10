@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="5dp"
+   android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/single_provider"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/service_provider_picture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/purple_200"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/provider_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/service_provider_picture"
+                android:text="Driver name"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/provider_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/service_provider_picture"
+                android:text="Service provider phone number"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/job"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="service"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="R "
+                android:textSize="14dp"
+                android:layout_below="@id/job"
+                android:layout_toLeftOf="@id/amount"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="8dp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:textAllCaps="false"
+            android:text="Request Service Provider"
+            android:id="@+id/accepServiceProvider"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

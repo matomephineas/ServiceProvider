@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_service_provider_profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_customer_requests"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="Customer Requests" />
+        <item
+            android:id="@+id/nav_accepted_requests"
+            android:icon="@drawable/ic_baseline_format_list_numbered_24"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Logout" />
+    </group>
+</menu>

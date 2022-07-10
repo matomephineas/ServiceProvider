@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    >
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey tumelo"
+            android:textColor="@color/black"
+            android:id="@+id/sender"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_below="@id/sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey tumelo,how r u doing"
+            android:textColor="@color/black"
+            android:id="@+id/reciever"
+            android:layout_marginLeft="5dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

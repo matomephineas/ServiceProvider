@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar"
+      >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/close"
+                    app:tint="@android:color/white" />
+                <ImageView
+                    android:id="@+id/save_button"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/save_edited_info"
+                    app:tint="@android:color/white" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/purple_200"
+        app:civ_border_width="1dp" />
+    <TextView
+        android:id="@+id/change_picture_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:text="Change Picture"
+        android:layout_centerHorizontal="true"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:layout_below="@id/change_picture_btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/name"/>
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Enter phone number"
+        android:inputType="phone" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Service"
+        android:layout_below="@id/phone_number"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:id="@+id/service_provider_service"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Service Amount"
+        android:layout_below="@id/service_provider_service"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:id="@+id/service_amount"/>
+</RelativeLayout>

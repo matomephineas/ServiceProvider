@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_customer_main">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/cust_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
+
+<RelativeLayout
+       android:visibility="gone"
+        android:background="@drawable/relative_background"
+        android:id="@+id/rel_service"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv"
+            android:text="Enter Service"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tv"
+            android:background="@drawable/dialog_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_location_24"
+                        />
+                    <EditText
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Current Address"
+                        android:id="@+id/txtYourLocation"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="50dp"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_miscellaneous_services_24"
+                        />
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter desired service"
+                        android:id="@+id/txtYourServices"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+<RelativeLayout
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rel1"
+    android:layout_above="@id/btnRequestService"
+    android:background="@color/purple_700">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/service_provider_picture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/purple_200"
+        app:civ_border_width="2dp" />
+    <TextView
+        android:id="@+id/provider_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/service_provider_picture"
+        android:text="Driver name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/service_provider_picture"
+        android:text="Service provider phone number"
+        android:layout_below="@id/provider_name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/service_driver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/service_provider_picture"
+        android:text="Service provider service"
+        android:layout_below="@id/phone"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:id="@+id/amount_driver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/service_provider_picture"
+        android:text="Service amount"
+        android:layout_below="@id/service_driver"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/phone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        app:tint="@color/white" />
+
+</RelativeLayout>
+
+    <RelativeLayout
+       android:visibility="gone"
+        android:id="@+id/linear_with_hint_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_add_location_24" />
+
+            <EditText
+                android:id="@+id/YourLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Current Address" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_miscellaneous_services_24" />
+
+            <EditText
+                android:id="@+id/YourServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Enter desired service" />
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/confirmService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Confirm Service"
+            android:textAllCaps="false" />
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmService"
+            android:layout_marginTop="5dp"
+            android:text="List of Service providers" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp" />
+
+
+    </RelativeLayout>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:text="Request Service"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="10dp"
+      android:id="@+id/btnRequestService"
+      android:textAllCaps="false"/>
+</RelativeLayout>
